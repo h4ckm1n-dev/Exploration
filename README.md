@@ -211,7 +211,7 @@ if __name__ == "__main__":
         console.print(markdown)
 ```
 Here is how the tailored model will now answer to a simple question :
-![Capture d’écran du 2024-02-18 16-13-46](https://github.com/h4ckm1n-dev/Local-llm-tutorial/assets/97511408/1a41ea53-6aeb-44d5-a817-0654d4c3b254)
+![Capture d’écran du 2024-02-18 16-17-39](https://github.com/h4ckm1n-dev/Local-llm-tutorial/assets/97511408/a7a82603-4a58-4799-9471-b8392fc63d43)
 as you can see the solution proposed is now pretty solid in term of security :)
 
 ### Key Components of the Script
