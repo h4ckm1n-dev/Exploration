@@ -36,26 +36,25 @@ After the installation is complete, you will have Ollama installed on your Ubunt
 
 ## Step 2: Download a Model from Hugging Face
 After installing Ollama, the next step is to download a model that you intend to run locally. For the purposes of this tutorial, we will use the dolphin-2.7-mixtral-8x7b-GGUF model available on Hugging Face.
-
+```
+https://huggingface.co/TheBloke/dolphin-2.7-mixtral-8x7b-GGUF
+```
 ### Prerequisites
-An active internet connection for downloading the model.
 Sufficient disk space for the model. The 'dolphin-2.7-mixtral-8x7b-GGUF' model requires significant storage.
 *Warning:* The model selected for this tutorial is resource-intensive. Ensure that your system has at least 32GB of RAM to run the Q4 model effectively. Running this model on a system with insufficient resources may lead to suboptimal performance or failure.
 
-### Download Process
-Navigate to the Model Page: Open a web browser and go to the model's Hugging Face page: dolphin-2.7-mixtral-8x7b-GGUF on Hugging Face.
-
-*Download the Model:* You can download the model directly from the website by clicking the "Download" button or using the provided Hugging Face command line instructions. Ensure you are logged in to your Hugging Face account to see the specific command if required.
-
-*Save the Model Locally:* Choose an appropriate directory on your Ubuntu system where you want to save the model files. Remember the path to this directory, as you will need it when configuring Ollama to use the downloaded model.
+*Save the Model Locally:* Choose an appropriate directory on your Ubuntu system where you want to save the model files.
 
 ## Step 3: Create a Model Configuration File
 To fine-tune the large language model to your specific requirements, you'll need to create a model configuration file in the same directory as your downloaded model. This file allows you to adjust various parameters and settings, ensuring the model's output aligns with your desired use case.
 
-### Creating the Configuration File
-Navigate to the Model Directory: Open a terminal and change to the directory where you've downloaded the dolphin-2.7-mixtral-8x7b.Q4_K_M.gguf model. Use the cd command followed by the path to your model directory.
+bellow is a comprehensive guide on how to master prompt engineering
+```
+https://github.com/dair-ai/Prompt-Engineering-Guide
+```
 
-*Create the Configuration File:* Using a text editor, create a new file named "code-assistant" (or another preferred name) in the model directory. You can use command line editors like nano or vim, or any graphical text editor.
+### Creating the Configuration File
+Navigate to the Model Directory where you've downloaded the dolphin-2.7-mixtral-8x7b.Q4_K_M.gguf model. *Create the Configuration File:* Using a text editor, create a new file named "code-assistant" (or another preferred name) in the model directory.
 
 *Add Configuration Parameters:* Copy and paste the following configuration into your new file, adjusting prompt as needed, in our case we want to emphasy our model ability to create code
 
