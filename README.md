@@ -1,4 +1,4 @@
-# Running a Local Large Language Model (LLM) on Ubuntu
+# Running a Custom Local Large Language Model (LLM) on Ubuntu
 This tutorial guides you through the process of running a local LLM on Ubuntu, starting with the installation of Ollama, a popular framework for utilizing large language models.
 
 # Acknowledgments
