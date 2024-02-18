@@ -44,7 +44,7 @@ https://huggingface.co/TheBloke/dolphin-2.7-mixtral-8x7b-GGUF
 
 ### Prerequisites
 Sufficient disk space for the model. The 'dolphin-2.7-mixtral-8x7b-GGUF' model requires significant storage.
-*Warning:* The model selected for this tutorial is resource-intensive. Ensure that your system has at least 32GB of RAM to run the Q4 model effectively. Running this model on a system with insufficient resources may lead to suboptimal performance or failure.
+*Warning:* The model selected for this tutorial is resource-intensive. Ensure that your system has at least 32GB of RAM to run the Q4 model effectively. Running this model on a system with insufficient resources may lead to suboptimal performance or failure. also a cuda graphic card help a lot. (with 64go of ram and 24go of vram it run very nice)
 
 *Save the Model Locally:* Choose an appropriate directory on your Ubuntu system where you want to save the model files.
 
