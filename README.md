@@ -51,10 +51,10 @@ Sufficient disk space for the model. The 'dolphin-2.7-mixtral-8x7b-GGUF' model r
 ## Step 3: Create a Model Configuration File
 To fine-tune the large language model to your specific requirements, you'll need to create a model configuration file in the same directory as your downloaded model. This file allows you to adjust various parameters and settings, ensuring the model's output aligns with your desired use case.
 
-bellow is a comprehensive guide on how to master prompt engineering
+Bellow is a comprehensive guide on how to master prompt engineering
 
 https://github.com/dair-ai/Prompt-Engineering-Guide
-
+Since this is where all the magic happen you shouuld really read this :)
 
 ### Creating the Configuration File
 Navigate to the Model Directory where you've downloaded the dolphin-2.7-mixtral-8x7b.Q4_K_M.gguf model. *Create the Configuration File:* Using a text editor, create a new file named "code-assistant" (or another preferred name) in the model directory.
