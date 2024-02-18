@@ -2,7 +2,7 @@
 This tutorial guides you through the process of running a local LLM on Ubuntu, starting with the installation of Ollama, a popular framework for utilizing large language models.
 
 # Acknowledgments
-This project has been made possible thanks to the power and flexibility of various open-source projects. We are deeply grateful to the developers and contributors of these tools for their hard work and dedication to the open-source community.
+This project has been made possible thanks to the power and flexibility of various open-source projects. i'm deeply grateful to the developers and contributors of these tools for their hard work and dedication to the open-source community.
 
 *Ollama:* For providing the framework to run local large language models efficiently and effectively.
 Hugging Face: For their extensive repository of pre-trained models and their commitment to making AI more accessible.
