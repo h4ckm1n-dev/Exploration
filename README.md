@@ -15,6 +15,7 @@ Hugging Face: For their extensive repository of pre-trained models and their com
 A special thank you goes out to every individual and team behind these projects. Your efforts have not only facilitated the development of this project but also continue to inspire and enable countless others within the tech community.
 
 https://ollama.com/
+
 https://huggingface.co/
 
 ## Step 1: Install Ollama
