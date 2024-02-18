@@ -5,9 +5,13 @@ This tutorial guides you through the process of running a local LLM on Ubuntu, s
 This project has been made possible thanks to the power and flexibility of various open-source projects. i'm deeply grateful to the developers and contributors of these tools for their hard work and dedication to the open-source community.
 
 *Ollama:* For providing the framework to run local large language models efficiently and effectively.
+
 Hugging Face: For their extensive repository of pre-trained models and their commitment to making AI more accessible.
+
 *Rich:* For enhancing the terminal's visual output, making it more engaging and readable.
+
 *The open-source community:* For continuously pushing the boundaries of technology and innovation, making projects like this possible.
+
 A special thank you goes out to every individual and team behind these projects. Your efforts have not only facilitated the development of this project but also continue to inspire and enable countless others within the tech community.
 
 https://ollama.com/
@@ -54,7 +58,8 @@ To fine-tune the large language model to your specific requirements, you'll need
 Bellow is a comprehensive guide on how to master prompt engineering
 
 https://github.com/dair-ai/Prompt-Engineering-Guide
-Since this is where all the magic happen you shouuld really read this :)
+
+Since this is where all the magic happen you should really read this :)
 
 ### Creating the Configuration File
 Navigate to the Model Directory where you've downloaded the dolphin-2.7-mixtral-8x7b.Q4_K_M.gguf model. *Create the Configuration File:* Using a text editor, create a new file named "code-assistant" (or another preferred name) in the model directory.
