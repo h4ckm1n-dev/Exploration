@@ -212,7 +212,7 @@ if __name__ == "__main__":
 ```
 Here is how the tailored model will now answer to a simple question :
 ![Capture d’écran du 2024-02-18 16-17-39](https://github.com/h4ckm1n-dev/Local-llm-tutorial/assets/97511408/a7a82603-4a58-4799-9471-b8392fc63d43)
-as you can see the solution proposed is now pretty solid in term of security :)
+as you can see the solution proposed are pretty solid in term of security :)
 
 ### Key Components of the Script
 Memory Management: Saves and loads a JSON file to retain context or "memory" across different queries to the model.
