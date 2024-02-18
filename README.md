@@ -39,9 +39,9 @@ After the installation is complete, you will have Ollama installed on your Ubunt
 
 ## Step 2: Download a Model from Hugging Face
 After installing Ollama, the next step is to download a model that you intend to run locally. For the purposes of this tutorial, we will use the dolphin-2.7-mixtral-8x7b-GGUF model available on Hugging Face.
-```
+
 https://huggingface.co/TheBloke/dolphin-2.7-mixtral-8x7b-GGUF
-```
+
 ### Prerequisites
 Sufficient disk space for the model. The 'dolphin-2.7-mixtral-8x7b-GGUF' model requires significant storage.
 *Warning:* The model selected for this tutorial is resource-intensive. Ensure that your system has at least 32GB of RAM to run the Q4 model effectively. Running this model on a system with insufficient resources may lead to suboptimal performance or failure.
@@ -52,9 +52,9 @@ Sufficient disk space for the model. The 'dolphin-2.7-mixtral-8x7b-GGUF' model r
 To fine-tune the large language model to your specific requirements, you'll need to create a model configuration file in the same directory as your downloaded model. This file allows you to adjust various parameters and settings, ensuring the model's output aligns with your desired use case.
 
 bellow is a comprehensive guide on how to master prompt engineering
-```
+
 https://github.com/dair-ai/Prompt-Engineering-Guide
-```
+
 
 ### Creating the Configuration File
 Navigate to the Model Directory where you've downloaded the dolphin-2.7-mixtral-8x7b.Q4_K_M.gguf model. *Create the Configuration File:* Using a text editor, create a new file named "code-assistant" (or another preferred name) in the model directory.
