@@ -210,6 +210,9 @@ if __name__ == "__main__":
         markdown = Markdown(markdown_text)
         console.print(markdown)
 ```
+Here is how the tailored model will now answer to a simple question :
+
+![Capture d’écran du 2024-02-18 16-13-46](https://github.com/h4ckm1n-dev/Local-llm-tutorial/assets/97511408/39db5afd-6358-41b1-b26b-4fa97f02b480)
 
 ### Key Components of the Script
 Memory Management: Saves and loads a JSON file to retain context or "memory" across different queries to the model.
