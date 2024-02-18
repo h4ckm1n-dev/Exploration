@@ -10,6 +10,9 @@ Hugging Face: For their extensive repository of pre-trained models and their com
 *The open-source community:* For continuously pushing the boundaries of technology and innovation, making projects like this possible.
 A special thank you goes out to every individual and team behind these projects. Your efforts have not only facilitated the development of this project but also continue to inspire and enable countless others within the tech community.
 
+https://ollama.com/
+https://huggingface.co/
+
 ## Step 1: Install Ollama
 Ollama is an open-source tool designed to enable users to run large language models locally. The installation process involves a single command that downloads and executes a script from Ollama's official website.
 
