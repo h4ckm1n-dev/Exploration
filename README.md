@@ -248,5 +248,5 @@ http://127.0.0.1:8080
 
 ![Capture d’écran du 2024-02-19 11-05-00](https://github.com/h4ckm1n-dev/Exploration/assets/97511408/221a4833-9de6-4813-b601-970c7c53de36)
 
-You can now enjoy you finetunned model in a gpt like web interface :)
+You can now enjoy youre finetunned model in a gpt like web interface :)
 
