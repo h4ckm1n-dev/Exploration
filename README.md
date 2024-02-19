@@ -168,7 +168,7 @@ Congratulations! You have successfully configured and started running your local
 After setting up and verifying your local LLM with Ollama, you can start integrating this powerful tool into your own applications. The following Python script exemplifies how to programmatically query your model for complex tasks, such as generating cybersecurity commands for Kali Linux.
 
 *Python Script Example:* Querying LLM for Kali Linux Commands
-This script makes a POST request to your locally running Ollama model, passing a detailed prompt that requests cybersecurity insights and commands. It demonstrates handling API responses, saving and loading a "memory" file to persist context across queries, and presenting the model's response in a readable format using the rich library for enhanced console output.
+This script makes a POST request to your locally running Ollama model, passing a detailed prompt that requests cybersecurity insights and commands. It demonstrates handling API responses, and presenting the model's response in a readable format using the rich library for enhanced console output.
 
 ```python
 #!/usr/bin/env python3
