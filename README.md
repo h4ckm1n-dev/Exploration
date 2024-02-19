@@ -233,7 +233,7 @@ Replace "code-assistant:latest" in the data dictionary with the actual name and 
 Run the script from the command line, providing a detailed question as an argument, e.g., ./script.py "How to secure a Linux server?".
 This example demonstrates the flexibility and power of integrating a local LLM into your software projects, enabling you to leverage its capabilities directly within your applications.
 
-# Install Ollama-webUi to have a GPT like interface for interacting with our own fine tuned model
+# Final Step : Install Ollama-WebUi to have a GPT like interface for interacting with our own fine tuned model
 
 https://github.com/open-webui/open-webui
 
