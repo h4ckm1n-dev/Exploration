@@ -235,6 +235,8 @@ This example demonstrates the flexibility and power of integrating a local LLM i
 
 # Final Step : Install Ollama-WebUi to have a GPT like interface for interacting with our own fine tuned model
 
+I'm not going to tell you how to install and use docker. but when you have docker setup you can install Ollama-WeUi 
+
 https://github.com/open-webui/open-webui
 
 ```bash
