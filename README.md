@@ -232,3 +232,19 @@ Ensure the rich library is installed (pip install rich if needed).
 Replace "code-assistant:latest" in the data dictionary with the actual name and version of your model if different.
 Run the script from the command line, providing a detailed question as an argument, e.g., ./script.py "How to secure a Linux server?".
 This example demonstrates the flexibility and power of integrating a local LLM into your software projects, enabling you to leverage its capabilities directly within your applications.
+
+# Install Ollama-webUi to have a GPT like interface for interacting with our own fine tuned model
+
+https://github.com/open-webui/open-webui
+
+```bash
+docker run -d --network=host -v ollama-webui:/app/backend/data -e OLLAMA_API_BASE_URL=http://127.0.0.1:11434/api --name ollama-webui --restart always ghcr.io/ollama-webui/ollama-webui:main
+```
+When installation is complete open your terminal and go to : 
+
+http://127.0.0.1:8080
+
+![Capture d’écran du 2024-02-19 11-05-00](https://github.com/h4ckm1n-dev/Exploration/assets/97511408/221a4833-9de6-4813-b601-970c7c53de36)
+
+You can now enjoy you finetunned model in a gpt like web interface :)
+
