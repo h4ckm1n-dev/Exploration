@@ -240,7 +240,7 @@ https://github.com/open-webui/open-webui
 ```bash
 docker run -d --network=host -v ollama-webui:/app/backend/data -e OLLAMA_API_BASE_URL=http://127.0.0.1:11434/api --name ollama-webui --restart always ghcr.io/ollama-webui/ollama-webui:main
 ```
-When installation is complete open your terminal and go to : 
+When installation is complete open your browser and go to : 
 
 http://127.0.0.1:8080
 
