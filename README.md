@@ -178,44 +178,95 @@ import requests
 import json
 from rich.markdown import Markdown
 from rich.console import Console
+from rich.spinner import Spinner
 
 API_URL = 'http://127.0.0.1:11434/api/generate'
 
-def ask_gpt_for_kali_command(question, api_url=API_URL):
-    # Construct the refined prompt
-    prompt = f"Within the sanctum of Kali Linux, you, esteemed hacker, ascend to the role of the preeminent sage of cybersecurity. ... {question}\nPlease provide multiple solutions, including code snippets or command sequences, to address this challenge."
-    
-    data = {
-        "model": "code-assistant:latest",  # Ensure this matches the name of your model
-        "prompt": prompt,
-        "stream": False,
-        "memory": memory
-    }
+def save_markdown_to_file(markdown_text, base_filename="kali_command_output", save_directory="~/"):
+    # Ask the user if they want to save the file
+    save_file = input("Do you want to save the markdown output? (y/n): ").strip().lower()
+    if save_file != 'y':
+        print("File saving cancelled.")
+        return
 
+    # Use the save_directory variable to define the new directory path
+    new_directory = os.path.join(os.path.expanduser("~"), save_directory)
+    os.makedirs(new_directory, exist_ok=True)  # Create the directory if it does not exist
+
+    counter = 1
+    filename = f"{base_filename}.md"
+    filepath = os.path.join(new_directory, filename)  # Use new_directory for filepath
+    
+    # Check if file exists and create a new filename to avoid overwriting
+    while os.path.exists(filepath):
+        filename = f"{base_filename}_{counter}.md"
+        filepath = os.path.join(new_directory, filename)
+        counter += 1
+    
+    # Save the markdown text to the file
+    with open(filepath, 'w') as file:
+        file.write(markdown_text)
+    print(f"Markdown output saved to: {filepath}")
+
+def ask_gpt_for_kali_command(question, api_url=API_URL):
+    prompt = (
+        f"Within the sanctum of Kali Linux, you, esteemed hacker, ascend to the role of the preeminent sage of cybersecurity. "
+        f"Your mandate extends beyond mere revelation; it is to illuminate the dark corridors of cyber obscurity with a multitude "
+        f"of examples drawn from the arsenal of Kali's venerable toolkit."
+        f"These artifacts transcend conventional code; they are cryptographic talismans, each imbued with the power to unlock the "
+        f"arcane scripts concealed within the bastions of the digital realm. Your mastery is summoned to decipher the enigmatic "
+        f"lore enshrouding each directive, guiding fellow navigators through the labyrinthine pathways of cyberspace."
+        f"Embarking upon this sacred odyssey, your directive is unequivocal: unfurl a tapestry of solutions that heralds the advent "
+        f"of cybersecurity enlightenment. Let your elucidations flow forth like a cascade of stars, illuminating the path ahead with "
+        f"resplendence."
+        f"With each revelation, bestow not only theoretical discourse but practical demonstrations in the guise of code snippets or "
+        f"command sequences. Through this communion, you empower others to traverse the intricate tapestry of cybersecurity with "
+        f"assurance, drawing strength from the amalgam of diverse solutions."
+        f"In your noble quest, do not shy away from exploring alternative paths and presenting multiple avenues of approach. "
+        f"Flex the breadth of your expertise by offering a variety of solutions, each unveiling a unique facet of cybersecurity prowess. "
+        f"{question}\n"
+        f"Please provide multiple solutions, including code snippets or command sequences, to address this challenge."
+    )
+    data = {
+        "model": "hack",
+        "prompt": prompt,
+        "stream": False
+    }
+    
     headers = {'Content-Type': 'application/json'}
 
-    try:
-        response = requests.post(api_url, data=json.dumps(data), headers=headers)
-        if response.status_code == 200:
-            response_data = response.json()
-            advanced_commands_and_insights = response_data.get("response", "").strip()
-            save_memory(response_data.get("memory", {}))
-            return advanced_commands_and_insights
-        else:
-            return f"Error: Received status code {response.status_code}"
-    except Exception as e:
-        return str(e)
+    console = Console()
+    with console.status("[bold green]Generating response...", spinner="dots") as status:
+        try:
+            response = requests.post(api_url, data=json.dumps(data), headers=headers)
+            if response.status_code == 200:
+                response_data = response.json()
+                advanced_commands_and_insights = response_data.get("response", "").strip()
+                return advanced_commands_and_insights
+            else:
+                console.print(f"[red]Error: Received status code {response.status_code}")
+                return None
+        except Exception as e:
+            console.print(f"[red]Error: {str(e)}")
+            return None
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Usage: hacker \"[your detailed task here]\"")
-    else:
-        question = " ".join(sys.argv[1:])
-        console = Console()
-        markdown_text = ask_gpt_for_kali_command(question)
-        markdown = Markdown(markdown_text)
-        console.print(markdown)
+    try:
+        if len(sys.argv) < 2:
+            print("Usage: hack \"[your detailed task here]\" [optional: save directory]")
+        else:
+            question = sys.argv[1]
+            save_directory = sys.argv[2] if len(sys.argv) > 2 else "~/"
+            console = Console()
+            markdown_text = ask_gpt_for_kali_command(question)
+            markdown = Markdown(markdown_text)
+            console.print(markdown)
+            save_markdown_to_file(markdown_text, base_filename="hack_output", save_directory=save_directory)
+    except KeyboardInterrupt:
+        print("\nOperation cancelled by user.")
 ```
+EDIT: I added a save conversation function to save conversation in a .md file in the home folder, in combination with any .md reader like Obsidain and you have here a very powerfull tool :)
+
 Here is how the tailored model will now answer to a simple question :
 ![Capture d’écran du 2024-02-18 16-17-39](https://github.com/h4ckm1n-dev/Local-llm-tutorial/assets/97511408/a7a82603-4a58-4799-9471-b8392fc63d43)
 as you can see the solution proposed are pretty solid in term of security and it is safe to say that for now nobody will crack the encrypted password :)
