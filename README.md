@@ -182,7 +182,7 @@ from rich.spinner import Spinner
 
 API_URL = 'http://127.0.0.1:11434/api/generate'
 
-def save_markdown_to_file(markdown_text, base_filename="kali_command_output", save_directory="~/"):
+def save_markdown_to_file(markdown_text, base_filename="code-assistant_command_output", save_directory="~/"):
     # Ask the user if they want to save the file
     save_file = input("Do you want to save the markdown output? (y/n): ").strip().lower()
     if save_file != 'y':
@@ -228,7 +228,7 @@ def ask_gpt_for_kali_command(question, api_url=API_URL):
         f"Please provide multiple solutions, including code snippets or command sequences, to address this challenge."
     )
     data = {
-        "model": "hack",
+        "model": "code-assistant",
         "prompt": prompt,
         "stream": False
     }
@@ -253,7 +253,7 @@ def ask_gpt_for_kali_command(question, api_url=API_URL):
 if __name__ == "__main__":
     try:
         if len(sys.argv) < 2:
-            print("Usage: hack \"[your detailed task here]\" [optional: save directory]")
+            print("Usage: python3 code-assistant.py \"[your detailed task here]\" [optional: save directory]")
         else:
             question = sys.argv[1]
             save_directory = sys.argv[2] if len(sys.argv) > 2 else "~/"
