@@ -43,7 +43,7 @@ This command uses curl to fetch the installation script from Ollama's website an
 After the installation is complete, you will have Ollama installed on your Ubuntu system, ready for configuring and running a local large language model.
 
 ## Step 2: Download a Model from Hugging Face
-After installing Ollama, the next step is to download a model that you intend to run locally. For the purposes of this tutorial, we will use the dolphin-2.7-mixtral-8x7b-GGUF_Q4 model available on Hugging Face, as it's a very powefull model and it's uncencored (and i don't like having limit !).
+After installing Ollama, the next step is to download a model that you intend to run locally. For the purposes of this tutorial, we will use the dolphin-2.7-mixtral-8x7b-GGUF_Q4 model available on Hugging Face, as it's a very powefull model and it's uncencored (and i don't like having limit !). This model is the model used by the Brave Browser execpt the dolphin one is uncensored
 
 https://huggingface.co/TheBloke/dolphin-2.7-mixtral-8x7b-GGUF
 
