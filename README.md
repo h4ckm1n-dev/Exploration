@@ -12,8 +12,6 @@ Hugging Face: For their extensive repository of pre-trained models and their com
 
 *The open-source community:* For continuously pushing the boundaries of technology and innovation, making projects like this possible.
 
-A special thank you goes out to every individual and team behind these projects. Your efforts have not only facilitated the development of this project but also continue to inspire and enable countless others within the tech community.
-
 https://ollama.com/
 
 https://huggingface.co/
@@ -270,13 +268,6 @@ EDIT: I added a save conversation function to save conversation in a .md file in
 Here is how the tailored model will now answer to a simple question :
 ![Capture d’écran du 2024-02-18 16-17-39](https://github.com/h4ckm1n-dev/Local-llm-tutorial/assets/97511408/a7a82603-4a58-4799-9471-b8392fc63d43)
 as you can see the solution proposed are pretty solid in term of security and it is safe to say that for now nobody will crack the encrypted password :)
-
-### Key Components of the Script
-Memory Management: Saves and loads a JSON file to retain context or "memory" across different queries to the model.
-Dynamic Prompt Construction: Builds a detailed, context-rich prompt designed to elicit specific types of responses from the model.
-API Communication: Sends a request to the Ollama model's API endpoint and handles the response, including error checking.
-Output Formatting: Utilizes the rich library to format and display the model's response in markdown within the console, improving readability.
-Running the Script
 
 ### To use this script:
 Ensure the rich library is installed (pip install rich if needed).
